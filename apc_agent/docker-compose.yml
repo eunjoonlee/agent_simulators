@@ -1,0 +1,12 @@
+
+services:
+  apc-agent:
+    image: apc-agent:latest
+    container_name: apc-agent
+    networks:
+      kbi_shared_network:
+        ipv4_address: 172.16.0.35
+
+networks:
+  kbi_shared_network:
+    external: true

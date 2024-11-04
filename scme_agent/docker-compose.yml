@@ -1,0 +1,12 @@
+
+services:
+  apc-agent:
+    image: scme-agent:latest
+    container_name: scme-agent
+    networks:
+      kbi_shared_network:
+        ipv4_address: 172.16.0.20
+
+networks:
+  kbi_shared_network:
+    external: true

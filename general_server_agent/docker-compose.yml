@@ -1,0 +1,49 @@
+services:
+  snmp_agent_1:
+    image: general-server-agent
+    container_name: callering-agent
+    networks:
+      kbi_shared_network:
+        ipv4_address: 172.16.0.25
+    expose:
+      - "161/udp"
+
+  snmp_agent_2:
+    image: general-server-agent
+    container_name: billing-agent
+    networks:
+      kbi_shared_network:
+        ipv4_address: 172.16.0.33
+    expose:
+      - "161/udp"
+
+  snmp_agent_3:
+    image: general-server-agent
+    container_name: precid-agent
+    networks:
+      kbi_shared_network:
+        ipv4_address: 172.16.0.37
+    expose:
+      - "161/udp"
+
+  snmp_agent_4:
+    image: general-server-agent
+    container_name: infopush-agent
+    networks:
+      kbi_shared_network:
+        ipv4_address: 172.16.0.47
+    expose:
+      - "161/udp"
+
+  snmp_agent_5:
+    image: general-server-agent
+    container_name: record-agent
+    networks:
+      kbi_shared_network:
+        ipv4_address: 172.16.0.44
+    expose:
+      - "161/udp"
+
+networks:
+  kbi_shared_network:
+    external: true

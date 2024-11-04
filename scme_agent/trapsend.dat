@@ -1,0 +1,22 @@
+82050019, ALI_ALARM_FAN_INOUT
+82050019, ALI_ALARM_FAN_INOUT Clear
+82050018, CPU Over Used by Process(GW)
+82050018, CPU Over Used by Process(GW) Clear
+82050017, Memory Over Used(GW)
+82050017, Memory Over Used(GW) Clear
+82050016, Standby System Down(GW)
+82050016, Standby System Down(GW) Clear
+82050015, Network Interface Down(GW)
+82050015, Network Interface Down(GW) Clear
+82050014, Recording Disk Space Used (%)
+82050014, Recording Disk Space Used (%) Clear
+82050013, Temp Sensor Error
+82050013, Temp Sensor Error Clear
+82050012, PRI PCM Loss
+82050012, PRI PCM Loss Clear
+82050011, PRI SPID Init Error
+82050011, PRI SPID Init Error Clear
+82050010, PRI Blue Alarm
+82050010, PRI Blue Alarm Clear
+82000091, MGI DSP Error
+82000091, MGI DSP Error Clear
