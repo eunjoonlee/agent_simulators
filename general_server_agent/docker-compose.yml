@@ -7,6 +7,7 @@ services:
         ipv4_address: 172.16.0.25
     expose:
       - "161/udp"
+    privileged: true
 
   snmp_agent_2:
     image: general-server-agent
@@ -16,6 +17,7 @@ services:
         ipv4_address: 172.16.0.33
     expose:
       - "161/udp"
+    privileged: true
 
   snmp_agent_3:
     image: general-server-agent
@@ -25,6 +27,7 @@ services:
         ipv4_address: 172.16.0.37
     expose:
       - "161/udp"
+    privileged: true
 
   snmp_agent_4:
     image: general-server-agent
@@ -34,6 +37,7 @@ services:
         ipv4_address: 172.16.0.47
     expose:
       - "161/udp"
+    privileged: true
 
   snmp_agent_5:
     image: general-server-agent
@@ -43,6 +47,7 @@ services:
         ipv4_address: 172.16.0.44
     expose:
       - "161/udp"
+    privileged: true
 
 networks:
   kbi_shared_network:

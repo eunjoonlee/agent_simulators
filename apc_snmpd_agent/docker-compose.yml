@@ -1,0 +1,16 @@
+
+services:
+  apc-snmpd-agent:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: apc-snmpd-agent
+    volumes:
+      - ./files:/opt/snmp-files
+    networks:
+      kbi_shared_network:
+        ipv4_address: 172.16.0.35
+
+networks:
+  kbi_shared_network:
+    external: true

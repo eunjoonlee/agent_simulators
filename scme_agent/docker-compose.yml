@@ -6,6 +6,9 @@ services:
     networks:
       kbi_shared_network:
         ipv4_address: 172.16.0.20
+    environment:
+      - TARGET_IP=192.168.11.104
+      - TRAP_INTERVAL=600
 
 networks:
   kbi_shared_network:

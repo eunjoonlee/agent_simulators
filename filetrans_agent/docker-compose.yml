@@ -1,0 +1,24 @@
+services:
+  filetrans-agent:
+    container_name: filetrans-agent
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./data/filetrans:/home/DBsync/hrx/data/sync_info
+    environment:
+      - SFTP_USER=DBsync
+      - SFTP_PASS=Sync123!@#
+    networks:
+      kbi_shared_network:
+        ipv4_address: 172.16.250.5
+    ports:
+      - "2222:22"
+
+    cap_add:
+      - NET_RAW
+    restart: unless-stopped
+
+networks:
+  kbi_shared_network:
+    external: true

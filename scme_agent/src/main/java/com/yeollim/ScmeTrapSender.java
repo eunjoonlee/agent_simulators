@@ -101,11 +101,14 @@ public class ScmeTrapSender {
 
     // 메모리에 로드된 데이터를 일정 간격으로 전송
     private static void sendTraps(List<String[]> trapData) throws InterruptedException {
-        for (String[] trap : trapData) {
-            String code = trap[0];
-            String message = trap[1];
-            sendTrap(code, message);
-            TimeUnit.SECONDS.sleep(interval);
+        while (true) {  // 무한 반복
+            for (String[] trap : trapData) {
+                String code = trap[0];
+                String message = trap[1];
+                sendTrap(code, message);
+                TimeUnit.SECONDS.sleep(interval);
+            }
+            System.out.println("Reached end of file. Restarting from the beginning...");
         }
     }
 
